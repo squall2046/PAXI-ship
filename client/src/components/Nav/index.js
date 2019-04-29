@@ -124,7 +124,7 @@ class Nav extends Component {
                         <ListItem key={index}>
                           <span>&#9993; {message.title} </span>
                           <span className="msgSize"> &#34; {message.content} &#34; </span>
-                          <div className="msgSize"> by <i>{message.carrierid}</i> </div>
+                          {/* <div className="msgSize"> by <i>{message.carrierid}</i> </div> */}
 
 
                           {/* ====================== reply msg btn ====================== */}
