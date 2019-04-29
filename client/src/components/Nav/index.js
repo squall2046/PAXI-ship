@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Redirect, Link } from "react-router-dom";
 import { Button, ButtonToolbar, Modal } from 'react-bootstrap';
-import PopUp from "../../pages/PopUp";
+import PopUpReply from "../../pages/PopUpReply";
 import { List, ListItem } from "../List";
 import API from "../../utils/API";
 import "./style.css";
@@ -45,6 +45,13 @@ class Nav extends Component {
       .catch(err => console.log(err))
   }
 
+  removeMsgBtn = (msgId) => {
+    API.removeMsgBtn(msgId)
+      .then(res => console.log("removed message: ", res.data))
+      // .then(res => alert(`Your message has removed!`))
+      .catch(err => console.log(err));
+  }
+
   userLogout = () => {
     API.userLogout()
       .then(res => {
@@ -65,7 +72,7 @@ class Nav extends Component {
         <div className="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <Link to="/profile" className="nav-link paxi">PAXI &nbsp;&nbsp;</Link>
+              <Link to="/profile" className="nav-link">PAXI &nbsp;&nbsp;</Link>
             </li>
             {/* <li className="nav-item">
               <Link to="/profile" className="nav-item nav-link active text-muted navLink"><i className="fas fa-home"></i>Home &nbsp;&nbsp;</Link>
@@ -117,7 +124,7 @@ class Nav extends Component {
                         <ListItem key={index}>
                           <span>&#9993; {message.title} </span>
                           <span className="msgSize"> &#34; {message.content} &#34; </span>
-                          <div className="msgSize"> by <i>{message.carrierId}</i> </div>
+                          <div className="msgSize"> by <i>{message.carrierid}</i> </div>
 
 
                           {/* ====================== reply msg btn ====================== */}
@@ -125,7 +132,7 @@ class Nav extends Component {
                           <div className="reply-btn">
                             <ButtonToolbar>
                               <Button
-                                variant="danger btn-sm"
+                                variant="info btn-sm"
                                 onClick={() =>
                                   this.setState({
                                     modalShow: true,
@@ -133,17 +140,28 @@ class Nav extends Component {
                                 }
                               > reply
                               </Button>
-                              <PopUp
+                              <PopUpReply
                                 show={this.state.modalShow}
                                 onHide={modalClose}
                                 packid={message.packid}
-                                packtitle={message.title}
-                                carrierId={message.carrierId}
+                                userid={message.userid}
+                                carrierid={message.carrierid}
+                                loginid={this.state.user._id}
                               />
                             </ButtonToolbar>
                           </div>
                           {/* ==========================done============================ */}
 
+                          {/* ====================== remove msg btn ====================== */}
+                          {/* ===== react bootstrap modal (click to pop-up window) ===== */}
+                          {/* <div className="remove-btn">
+                            <Button
+                              variant="primary btn-sm"
+                              onClick={() => this.removeMsgBtn(message._id)}
+                            > X
+                              </Button>
+                          </div> */}
+                          {/* ==========================done============================ */}
                         </ListItem>
                       ))
                     }
