@@ -98,8 +98,8 @@ body {
 }
 .right {
   margin-left: 55%;
-  margin-top: -105px;
-  margin-bottom: 20px;
+  margin-top: -75px;
+  /* margin-bottom: 20px; */
 }
 #bold {
   font-weight: bold;
@@ -112,7 +112,7 @@ body {
   margin-top: -20px;
 
   display:block;
-  width:8.77ch;
+  /* width:8.77ch; */
   overflow:hidden;
   white-space: nowrap;
 
@@ -129,18 +129,14 @@ body {
 }
 .h3 {
   font-family: 'Oregano', cursive;
-  /* font-family: 'Shadows Into Light', cursive; */
   text-align: center
 }
 
 
 .status, .status2, .status3{
-  font-family: 'Shadows Into Light', cursive;
-  font-size: 80%;
-  font-weight: bold;
+  /* font-family: 'Archivo Narrow', sans-serif; */
+  font-size: 70%;
   position: absolute;
-  /* float: left; */
-  color: rgb(0, 29, 191);
   right:0%;
   left: 10%;
   top:10px;
@@ -210,14 +206,6 @@ overflow: hidden;
   font-size: 12px;
   }
 
-
-  /* sending message and pick it btn */
-
-  /* .msg-btn {
-    border-radius: 15px;
-    border: 2px rgb(0, 0, 0) solid;
-  } */
-
   /* //////////////////////////////////// */
 
 
@@ -233,28 +221,16 @@ overflow: hidden;
  
 .msg-btn {
     position: absolute;
-    float: right;
-    /* color: white; */
     right: 100px;
-    top: 10px;
-    margin-top: 370px;
-    margin-right: 20px;
-
+    bottom: 10px;
     border-radius: 5px;
-    /* border: 2px rgb(0, 0, 0) solid; */
-
   }
   
   .pick-btn {
     border-radius: 5px;
-    /* border: 2px rgb(0, 0, 0) solid; */
     position: absolute;
-    margin-top: 370px;
-    margin-right: 20px;
-    float: right;
-    color: white;
     right: 15px;
-    top: 10px
+    bottom: 10px
   }
 
 
@@ -276,7 +252,6 @@ overflow: hidden;
 	border:1px solid #ffffff;
 	display:inline-block;
 	cursor:pointer;
-	/* color:#ffffff; */
 	font-family:Arial;
 	font-size:15px;
 	padding:8px 20px;
@@ -425,11 +400,11 @@ border-bottom: 2px rgb(0, 0, 0) solid;
   position: absolute;
   background-image: url(http://www.clker.com/cliparts/R/A/6/i/F/y/note-pin-md.png);
   /* background-size: 95% 50%; */
-  background-size: 159px 100px;
+  background-size: 200px 120px;
   background-repeat: no-repeat;
   z-index: 3;
-    width: 41%;
-  height: 36%;
+    width: 160px;
+  height: 240px;
   margin-top: -7px;
   margin-left: 59%;
   /* margin-right: 5%; */
@@ -444,7 +419,7 @@ border-bottom: 2px rgb(0, 0, 0) solid;
     width:100%;
   }
   .packList{
-    margin-right: 40px
+    margin-right: 40px;
   }
   .right {
     margin-left: 20px;
@@ -476,7 +451,7 @@ border-bottom: 2px rgb(0, 0, 0) solid;
 
   
   .h2PR {
-    background: green;
+    background: rgb(68, 65, 65);
     border-radius: 0px 0px 0px 20px;
     margin-left: -14px;
     width: 108%;
@@ -490,15 +465,14 @@ border-bottom: 2px rgb(0, 0, 0) solid;
     margin-left: -25px;
     width: 104%;
   }
-  .LL{
+  /* .LL{
     position: absolute;
     background:rgb(89, 89, 89);
     width: 12px;
     height: 285%;
     margin-top: -25px;
-    /* margin-left: -178px; */
     margin-left: -127%;
-  }
+  } */
   .RR{
     position: absolute;
     background:rgb(89, 89, 89);
@@ -507,16 +481,15 @@ border-bottom: 2px rgb(0, 0, 0) solid;
     margin-top: -25px;
     margin-left: 96%;
   }
-
+/* 
   #paint {
-    background-size: 185px 139px;
+    background-size: 200px 139px;
     z-index: 1;
     margin-top: -7px;
     margin-left: 47%;
-  }
-  .status, .status2, .status3{
+  } */
+  /* .status, .status2, .status3{
     font-size: 100%;
-    
+  } */
 
-  }
 }
