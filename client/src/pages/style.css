@@ -400,14 +400,14 @@ border-bottom: 2px rgb(0, 0, 0) solid;
   position: absolute;
   background-image: url(http://www.clker.com/cliparts/R/A/6/i/F/y/note-pin-md.png);
   /* background-size: 95% 50%; */
-  background-size: 200px 120px;
+  background-size: 220px 120px;
   background-repeat: no-repeat;
   z-index: 3;
-    width: 160px;
+    width: 220px;
   height: 240px;
   margin-top: -7px;
   /* margin-left: 59%; */
-  right: 15%;
+  right: 10%;
 }
 @media(max-width:768px){
   .mapContainer {
