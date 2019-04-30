@@ -219,7 +219,7 @@ class Carrier extends Component {
                                   packid={this.state.currentpackid}
                                   packtitle={this.state.currentpacktitle}
                                   userid={this.state.currentpackuserid}
-                                  carrierId={this.state.userId}
+                                  carrierid={this.state.userId}
                                 />
                               </ButtonToolbar>
                             </div>
