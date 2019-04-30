@@ -55,22 +55,4 @@ export default {
   findAllMsg: (userId) => {
     return axios.get("/api/message/find/" + userId);
   },
-
-  // createUserBtn: (userInfo) => {
-  //   console.log("reactAPI client req:", "userInfo");
-  //   return axios.post("/api/user/create", userInfo);
-  // },
-  // findUserBtn: (userLogInfo) => {
-  //   console.log("reactAPI client req: find the user to login");
-  //   return axios.post("/api/user/find", userLogInfo);
-  // },
-  // logout: () => {
-  //   console.log("reactAPI client req: find the user to login");
-  //   return axios.get("/logout");
-  // },
-
-  // findUser: (id) => {
-  //   return axios.get("/findUser/" + id);
-  // }
-
 };
